@@ -45,6 +45,12 @@ describe("erosion", () => {
     const result = morph.erosion([], []);
     expect(result).toStrictEqual([]);
   });
+
+  // FIXME: 0 ⊖ 0 = 0
+  it("should erode the image", () => {
+    const result = morph.erosion([[false]], [[false]]);
+    expect(result).toStrictEqual([[false]]);
+  });
 });
 
 describe("opening", () => {

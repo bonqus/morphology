@@ -47,8 +47,7 @@ export const dilation = (img: BinaryMatrix, structElem: BinaryMatrix) => {
         }
       }
 
-      // @ts-expect-error
-      res[i][j] = currentPixel;
+      res[i]![j] = currentPixel;
     }
   }
   return res;
@@ -62,11 +61,6 @@ export const closing = (img: BinaryMatrix, structElem: BinaryMatrix) =>
 
 export const opening = (img: BinaryMatrix, structElem: BinaryMatrix) =>
   dilation(erosion(img, structElem), structElem);
-
-// export const translation = (img: BinaryMatrix, x: number) => {
-//   if (!Number.isInteger(x))
-//     throw new Error("Only integers alowed when translating");
-// };
 
 export const intersection = (
   imgA: BinaryMatrix,

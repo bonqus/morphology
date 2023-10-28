@@ -21,7 +21,7 @@
     "forceConsistentCasingInFileNames": true,
     "rootDir": "src",
     "outDir": "dist",
-    "lib": ["ESNext"]
+    "lib": ["ES2023"]
   },
   "include": ["src/"],
   "$schema": "https://json.schemastore.org/tsconfig",

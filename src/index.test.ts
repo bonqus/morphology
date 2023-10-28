@@ -46,10 +46,9 @@ describe("erosion", () => {
     expect(result).toStrictEqual([]);
   });
 
-  // FIXME: 0 ⊖ 0 = 0
-  it("should erode the image", () => {
+  it("false ⊖ false = true", () => {
     const result = morph.erosion([[false]], [[false]]);
-    expect(result).toStrictEqual([[false]]);
+      expect(result).toStrictEqual([[true]]);
   });
 });
 

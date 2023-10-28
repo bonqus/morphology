@@ -1,0 +1,9 @@
+export declare type Binary = boolean;
+export declare type BinaryMatrix = Binary[][];
+export declare const init: (img: number[][]) => BinaryMatrix;
+export declare const dilation: (img: BinaryMatrix, structElem: BinaryMatrix) => BinaryMatrix;
+export declare const erosion: (img: BinaryMatrix, structElem: BinaryMatrix) => boolean[][];
+export declare const closing: (img: BinaryMatrix, structElem: BinaryMatrix) => boolean[][];
+export declare const opening: (img: BinaryMatrix, structElem: BinaryMatrix) => BinaryMatrix;
+export declare const intersection: (imgA: BinaryMatrix, imgB: BinaryMatrix) => BinaryMatrix;
+export declare const union: (imgA: BinaryMatrix, imgB: BinaryMatrix) => BinaryMatrix;
